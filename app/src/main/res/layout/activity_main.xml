@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+
+    <LinearLayout android:id="@+id/authLayout"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:padding="32dp"
+        android:gravity="center">
+        <EditText android:id="@+id/etEmail" android:hint="Email" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <EditText android:id="@+id/etPassword" android:hint="Пароль" android:inputType="textPassword" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+        <Button android:id="@+id/btnLogin" android:text="Войти" android:layout_width="match_parent" android:layout_height="wrap_content"/>
+    </LinearLayout>
+
+    <LinearLayout android:id="@+id/mainLayout"
+        android:layout_width="match_parent" android:layout_height="match_parent"
+        android:orientation="vertical" android:visibility="gone">
+        <androidx.recyclerview.widget.RecyclerView android:id="@+id/recyclerOrders"
+            android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"/>
+        <LinearLayout android:id="@+id/notesContainer"
+            android:layout_width="match_parent" android:layout_height="0dp" android:layout_weight="1"
+            android:orientation="vertical" android:visibility="gone"/>
+        <com.google.android.material.bottomnavigation.BottomNavigationView
+            android:id="@+id/bottomNav"
+            android:layout_width="match_parent" android:layout_height="wrap_content"
+            app:menu="@menu/bottom_nav_menu"/>
+    </LinearLayout>
+</FrameLayout>
